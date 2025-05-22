@@ -1,28 +1,46 @@
-Que otra informacion necesitas para crear un proyecto de software desde cero con las siguientes condiciones:
+Crear un proyecto de software desde cero con las siguientes condiciones:
     lenguaje: Python 3.11.9 instalado,
+    sistema operativo: Windows,
+    IDE: Visual Studio Code,
+    gestor de versiones: Git,
+    gestor de base de datos: SQLite,
+    gestor de entornos virtuales: venv,
+    
     instalar sqlite3,
-        usar SQLite como base de datos,
-        crear base de datos,
+    configuración de la base de datos: SQLite,
+    crear base de datos,
+
     instalar Django 4.2.5,
-    no es necesario realizar pruebas automatizadas,
-    no es necesario realizar documentación de usuario,
     framework: django configurado en español,
     estructura de carpetas: estándar de Django,
-    idioma: preferentemente español, pruebas automatizadas o cobertura mínima: no,
+
+    idioma: preferentemente español,
+
+    pruebas automatizadas o cobertura mínima: no,
+    pruebas unitarias: no,
+    pruebas de integración: no,
+
     integración continua: no,
     despliegue: no,
-    documentación:
-        técnica: no,
-        de usuario: no,
+
+    documentación técnica: no,
+
     extraer y analizar todos los roles mencionados en los documentos 
         con autenticación de usuario y contraseña estándar de Django, 
         personalizar según los roles encontrados en los documentos, 
         estructura de las apps Django stándar, 
-        nombre para la app principal de Django genérico, 
+        nombre para la app principal de Django genérico,
+    nombre para la app de administración de usuarios genérico,
+    nombre para la app de administración de roles genérico,
+    nombre para la app de administración de permisos genérico,
+    
     proyecto para desarrollo local únicamente,
-    diseño de interfaz de usuario: simple y funcional,
+    
+    interfaz de usuario: simple y funcional,
         el fondo de la interfaz de usuario debe estar relacionado con el tema de la aplicación,
     interfaz de usuario: web,
+
+    poblar la base de datos con datos de prueba,
 
 update: python.exe -m pip install --upgrade pip
 
