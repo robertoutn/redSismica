@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Cerrar Orden de Inspección de ES</h2>
+<p><strong>Número:</strong> {{ orden.numero }}</p>
+<p><strong>Estación:</strong> {{ orden.estacion }}</p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Cerrar Orden</button>
+</form>
+{% endblock %}

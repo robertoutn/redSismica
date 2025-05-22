@@ -1,0 +1,32 @@
+Que otra informacion necesitas para crear un proyecto de software desde cero con las siguientes condiciones:
+    lenguaje: Python 3.11.9 instalado,
+    crear base de datos:
+        esta instalado Microsoft SQL Server 2019 (RTM-GDR) (KB5046859) - 15.0.2130.3 (X64) 	Oct 18 2024 15:25:23 	Copyright (C) 2019 Microsoft Corporation Developer Edition (64-bit) on Windows 10 Pro 10.0 <X64> (Build 19045: ) (Hypervisor), 
+        la cadena de conexión es: Data Source=HP;Integrated Security=True;Connect Timeout=30;Trust Server Certificate=True;Application Name=vscode-mssql, 
+    no es necesario realizar pruebas automatizadas,
+    no es necesario realizar documentación de usuario,
+    framework: django configurado en español,
+    estructura de carpetas: estándar de Django,
+    idioma: preferentemente español, pruebas automatizadas o cobertura mínima: no,
+    integración continua: no,
+    despliegue: no,
+    documentación técnica: no,
+    documentación de usuario: no,
+    extraer y analizar todos los roles mencionados en los documentos 
+        con autenticación de usuario y contraseña estándar de Django, 
+        personalizar según los roles encontrados en los documentos, 
+        estructura de las apps Django stándar, 
+        nombre para la app principal de Django genérico, 
+    proyecto para desarrollo local únicamente,
+
+El proyecto debe contener:
+    - el caso de uso "Dar cierre a orden de inspección de ES" (Nro. 37)
+    - un entorno virtual (venv) en la raíz del proyecto,
+    - un archivo requirements.txt con las dependencias necesarias para el proyecto,
+    - un archivo .gitignore para ignorar archivos innecesarios,
+    - un archivo README.md con una breve descripción del proyecto,
+    - un archivo manage.py para ejecutar comandos de Django,
+    - un archivo de configuración para la base de datos con la cadena de conexión proporcionada,
+    - un archivo de configuración para el entorno de desarrollo.
+
+Extraer el texto y revisar la informacion contenida en los archivos tipo docx que estan en la carpeta documentos.

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Órdenes de Inspección de ES</h2>
+<table>
+    <tr>
+        <th>Número</th>
+        <th>Estación</th>
+        <th>Responsable</th>
+        <th>Estado</th>
+        <th>Fecha de creación</th>
+        <th>Acciones</th>
+    </tr>
+    {% for orden in ordenes %}
+    <tr>
+        <td>{{ orden.numero }}</td>
+        <td>{{ orden.estacion }}</td>
+        <td>{{ orden.responsable.username }}</td>
+        <td>{{ orden.estado }}</td>
+        <td>{{ orden.fecha_creacion }}</td>
+        <td>
+            {% if orden.estado == 'abierta' %}
+                <a href="{% url 'cerrar_orden_inspeccion' orden.pk %}">Cerrar</a>
+            {% else %}
+                Cerrada
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
