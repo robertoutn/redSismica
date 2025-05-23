@@ -8,3 +8,9 @@ class CierreOrdenInspeccionForm(forms.ModelForm):
         widgets = {
             'comentario_cierre': forms.Textarea(attrs={'rows': 4, 'placeholder': 'Ingrese un comentario de cierre...'}),
         }
+
+    def clean_comentario_cierre(self):
+        comentario = self.cleaned_data.get('comentario_cierre')
+        if not comentario or not comentario.strip():
+            raise forms.ValidationError('El comentario de cierre es obligatorio.')
+        return comentario

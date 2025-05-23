@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 <h2>Órdenes de Inspección de ES</h2>
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
 <table>
     <tr>
         <th>Número</th>
@@ -18,8 +25,10 @@
         <td>{{ orden.estado }}</td>
         <td>{{ orden.fecha_creacion }}</td>
         <td>
-            {% if orden.estado == 'abierta' %}
-                <a href="{% url 'cerrar_orden_inspeccion' orden.pk %}">Cerrar</a>
+            {% if orden.estado == 'abierta' and user == orden.responsable or user.is_superuser %}
+                <a href="{% url 'cerrar_orden_inspeccion' orden.pk %}">Cerrar Orden de Inspección</a>
+            {% elif orden.estado == 'abierta' %}
+                Solo el responsable puede cerrar
             {% else %}
                 Cerrada
             {% endif %}
